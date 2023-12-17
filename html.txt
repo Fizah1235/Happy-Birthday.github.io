@@ -1,0 +1,57 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            background-image: url(49_f858cd3a.jpg);
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 40px;
+            padding-top: 150px;
+            animation: fade-in 2s ease-out;
+        }
+        
+        p {
+            color: white;
+            font-size: 24px;
+            padding-top: 20px;
+            animation: slide-in 2s ease-out;
+        }
+        
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slide-in {
+            from { transform: translateY(100px); }
+            to { transform: translateY(0); }
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var confetti = new ConfettiGenerator({ target: 'my-canvas' });
+            confetti.render();
+        }
+    </script>
+</head>
+<body>
+    <h1>Happy Birthday Hamza!</h1>
+    <p>Wishing you a day filled with love, joy, and happiness. I adore you!</p>
+    
+    <canvas id="my-canvas" style="position: fixed; top: 0; left: 0; pointer-events: none;"></canvas>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.0/dist/canvas-confetti.min.js"></script>
+</body>
+</html>
+
+
